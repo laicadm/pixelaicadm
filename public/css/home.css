@@ -56,4 +56,46 @@ body {
     font-weight: normal;
     font-style: normal;
     font-size: xx-large;
+    margin-top: -10px;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    height: 90vh;
+}
+
+.intro-item-left, .intro-item-mid, .intro-item-right {
+    padding: 10px;
+    /* border: 2px solid white; */
+}
+  
+.intro-item-left {
+    flex: 10%;
+}
+
+.intro-item-mid {
+    flex: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.intro-item-right {
+    flex: 10%;
+}
+  
+@media (max-width: 800px) {
+    .intro-container {
+      flex-direction: column;
+    }
+}
+
+.intro-title {
+    color: white;
+    font-size: 120px;
+    margin-bottom: 5px;
 }

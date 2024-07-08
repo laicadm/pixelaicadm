@@ -4,10 +4,12 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', 'HomeController@index', function () {
-//     return view('public.home');
-// });
 Route::get('/', [HomeController::class, 'index']); 
+
+// timer
+Route::get('/time', function () {
+    return response()->json(['time' => now()->setTimezone('Asia/Manila')->format('Y-m-d H:i:s')]);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -13,6 +13,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- CSS Files -->
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -32,5 +35,9 @@
                 {{ $slot }}
             </main>
         </div>
+
+        <!-- JS Files -->
+        <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+
     </body>
 </html>
